@@ -1,7 +1,7 @@
 body{
     background-color: #fca5a5;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
     margin: 0;
 }
@@ -34,6 +34,7 @@ body{
     gap: 15px;
 }
 
+
 #sidebarContent{
     padding-left: clamp(2%, 5%, 35px); 
 }
@@ -44,3 +45,135 @@ body{
     margin-top: 25px;
     margin-bottom: 30px;
 }
+
+#main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+#topBar{
+    background-color: #e7e5e4;
+    height: clamp(50px, 30%, 35vh);
+    width: 100%;
+}
+
+#mainPart{
+    width: 100%;
+    height: 100vh;
+}
+
+#topRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px clamp(2%, 5%, 35px);
+}
+
+input{
+  width: 250px;
+  height: 5px;
+  padding: 10px;
+  font-size: 16px;
+  outline:none;
+  background: linear-gradient(to left top, #000, #450a0a) fixed;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  transition: all 0.5s;
+}
+
+input:hover{
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+input:focus{
+    border: 2px solid rgba(255,255,255,0.5);
+    background: linear-gradient(to left top, #000, #991b1b) fixed;
+}
+
+#searchBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#account{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#profilePic{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+
+#profileName a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #450a0a  ;
+}
+
+#profileName a:hover{
+    cursor: pointer;
+    color: #991b1b;
+}
+
+#botRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px clamp(2%, 5%, 35px);
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-right: 25px;
+}
+
+#buttons button {
+  align-items: center;
+  background-color: #ef4444;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 400px;
+  min-height: 35px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+#buttons button:hover { 
+  background-color: #991b1b;
+  color: #ffffff;
+}
+
