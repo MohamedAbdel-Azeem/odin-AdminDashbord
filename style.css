@@ -7,10 +7,10 @@ body{
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 840px) {
     .sidebar ul li , .sidebar span h2{
         font-size: 0;
-    }
+    }    
 }
 
 .sidebar{
@@ -83,11 +83,55 @@ body{
 }
 
 #projects{
-    
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#projects h2{
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+
+
+#projects > div{ /* Card Container */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    #projects > div {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 200ms;
+    border-left: 7px solid #ef4444;
+}
+
+.card h3{
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 #rightCol{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .note{
@@ -110,7 +154,13 @@ body{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 200ms;
 }
+
+.coolList li:hover{
+    transform: scale(1.05);
+}
+
 
 #announcments hr {
     width: 70%; /* Change this value as needed */
