@@ -6,16 +6,24 @@ body{
     margin: 0;
 }
 
+
+@media (max-width: 750px) {
+    .sidebar ul li , .sidebar h2{
+        font-size: 0;
+    }
+}
+
 .sidebar{
     background-color: #dc2626;
-    width: clamp(100px, 30%, 400px);
+    width: clamp(90px, 20%, 400px);
+    min-width: 90px;
+    min-height: 100vh;
     color: #fef2f2;
     font-family: 'Roboto', sans-serif;
-    
 }
 
 .sidebar h2{
-    font-size: clamp(0.7rem, 1.5vw, 2rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
 }
 
 .sidebar ul{
@@ -25,7 +33,7 @@ body{
     list-style: none;
     padding: 0;
     margin-bottom: 80px;
-    font-size: clamp(0.7rem, 1.2vw, 1.5rem);
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
 }
 
 .sidebar ul li{
@@ -40,8 +48,9 @@ body{
 }
 
 #sidebarContent{
+    position: fixed;
     padding-left: clamp(2%, 5%, 35px);
-    min-height: 100vh; 
+    min-height: 100vh;; 
 }
 
 #header span img, #header span h2{
@@ -187,3 +196,4 @@ input:focus{
   background-color: #991b1b;
   color: #ffffff;
 }
+
