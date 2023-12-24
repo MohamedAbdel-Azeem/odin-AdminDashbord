@@ -7,16 +7,20 @@ body{
 }
 
 
-@media (max-width: 840px) {
+@media (max-width: 880px) {
     .sidebar ul li , .sidebar span h2{
         font-size: 0;
-    }    
+    }
+    
+    #topBar{
+        font-size: 10px;
+    }
+
 }
 
 .sidebar{
     background-color: #dc2626;
-    width: clamp(90px, 20%, 400px);
-    min-width: 90px;
+    width: clamp(70px, 17%, 400px);
     min-height: 100%;
     color: #fef2f2;
     font-family: 'Roboto', sans-serif;
@@ -52,8 +56,8 @@ body{
 
 #sidebarContent{
     position: fixed;
-    padding-left: clamp(2%, 5%, 35px);
-    min-height: 100vh;; 
+    padding-left: 15px;
+    min-height: 100vh; 
 }
 
 #header span img, #header span h2{
@@ -67,12 +71,13 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: clamp(90px, 20%, 400px);
+    margin-left: clamp(70px, 17%, 400px);;
 }
 
 #topBar{
     background-color: #e7e5e4;
     height: clamp(50px, 30%, 35vh);
+    width: 100%;
 }
 
 #mainPart{
@@ -86,6 +91,7 @@ body{
     margin-top: 25px;
     margin-left: 15px;
     margin-bottom: 20px;
+    margin-right: 7px;
 }
 
 #projects h2{
@@ -104,6 +110,7 @@ body{
     #projects > div {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
+
 }
 
 .card{
@@ -141,6 +148,11 @@ body{
     margin: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     text-align: center;
+}
+
+.note p{
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    color: #1f0f0f;
 }
 
 .coolList{
@@ -183,11 +195,10 @@ input{
   padding: 10px;
   font-size: 16px;
   outline:none;
-  /*background: linear-gradient(to left top, #000, #450a0a) fixed;*/
   background: transparent;
   border-radius: 10px;
   border: 1px solid #ccc;
-  color: rgba(255,255,255,0.8);
+  color: rgba(19, 17, 17, 0.8);
   transition: all 200ms;
 }
 
@@ -197,7 +208,6 @@ input:hover{
 
 input:focus{
     border: 2px solid rgba(255,255,255,0.5);
-    /*background: linear-gradient(to left top, #000,rgba(255, 196, 196, 0.988)) fixed;*/
     border: 2px solid #ef4444;
 }
 
