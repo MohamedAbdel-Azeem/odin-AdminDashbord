@@ -8,7 +8,7 @@ body{
 
 
 @media (max-width: 750px) {
-    .sidebar ul li , .sidebar h2{
+    .sidebar ul li , .sidebar span h2{
         font-size: 0;
     }
 }
@@ -17,9 +17,12 @@ body{
     background-color: #dc2626;
     width: clamp(90px, 20%, 400px);
     min-width: 90px;
-    min-height: 100vh;
+    min-height: 100%;
     color: #fef2f2;
     font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .sidebar h2{
@@ -64,6 +67,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: clamp(90px, 20%, 400px);
 }
 
 #topBar{
@@ -74,6 +78,43 @@ body{
 #mainPart{
     width: 100%;
     height: clamp(150px, 70vh, 100vh);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#projects{
+    
+}
+
+#rightCol{
+    text-align: center;
+}
+
+.note{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.coolList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.coolList li{
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#announcments hr {
+    width: 70%; /* Change this value as needed */
+    margin: 0 auto; /* Center the hr */
 }
 
 #topRow{
